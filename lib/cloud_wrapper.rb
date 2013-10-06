@@ -1,6 +1,8 @@
 module CloudWrapper
   module Instance
     class Instance
+      require File.dirname(__FILE__) + '/helpers/wrapper_main'
+      include CloudWrapper::Helper::WrapperMain
 
       @@implementations = {}
 
@@ -15,8 +17,8 @@ module CloudWrapper
       def initialize(cloud, api_version, options)
         @api_version = api_version
         @cloud = cloud.to_sym
-        @log_dir = '/var/log/cloud_wrapper/'
-        @knife_bin = '/opt/chef-server/embedded/bin/knife'
+        @log_dir = get_config_vars('log_dir')
+        @knife_bin = get_config_vars('knife_bin')
         puts("DEBUG: CloudWrapper::Instance.Initialize Class is up for #{cloud}")
       end
 
