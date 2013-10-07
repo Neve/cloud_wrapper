@@ -1,0 +1,16 @@
+openstack:
+  openstack_username: "admin"
+  openstack_password: "example"
+  openstack_auth_url: "http://cloud.mycompany.com:5000/v2.0/tokens"
+  openstack_tenant:   "admin"
+  openstack_insecure: "true"
+  openstack_options: 'space separated options list'
+
+# full description and additional params can be found at:
+# http://docs.opscode.com/plugin_knife_ec2.html
+ec2:
+  aws-access-key-id: 'KEY'
+  aws-secret-access-key: 'SECRET'
+  region: 'REGION'
+  availability-zone: 'ZONE'
+  ec2_options: 'space separated options list'
