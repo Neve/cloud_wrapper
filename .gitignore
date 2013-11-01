@@ -17,3 +17,5 @@ tmp
 _yardoc
 doc/
 .idea
+
+config_clouds.yml
